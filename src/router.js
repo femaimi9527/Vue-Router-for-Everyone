@@ -2,6 +2,9 @@ import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
 import Brazil from "./views/Brazil";
+import Panama from "./views/Panama";
+import Hawaii from "./views/Hawaii";
+import Jamaica from "./views/Jamaica";
 
 Vue.use(Router);
 export default new Router({
@@ -24,6 +27,21 @@ export default new Router({
       path: "/brazil",
       name: "brazil",
       component: Brazil
+    },
+    {
+      path: "/panama",
+      name: "panama",
+      component: Panama
+    },
+    {
+      path: "/hawaii",
+      name: "hawaii",
+      component: Hawaii
+    },
+    {
+      path: "/jamaica",
+      name: "jamaica",
+      component: Jamaica
     }
   ]
 });
