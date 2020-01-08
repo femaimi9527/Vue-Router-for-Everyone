@@ -29,19 +29,26 @@ npm run lint
 See [Configuration Reference](https://cli.vuejs.org/config/).
 
 
-Git删除本地分支和远程分支
-(1)删除本地分支：
+## Git删除本地分支和远程分支
+### (1)删除本地分支：
 
-1.查看本地分支列表
+#### 1.查看本地分支列表
+```
 git branch
+```
 
-2.删除本地分支
+#### 2.删除本地分支
+```
 git branch -d 分支名称
+```
 
-(2)删除远程分支：
+### (2)删除远程分支：
 
-1.查看远程分支列表
+#### 1.查看远程分支列表
+```
 git branch -a
-
-2.删除远程分支
+```
+#### 2.删除远程分支
+```
 git push origin --delete 远程分支名称
+```
