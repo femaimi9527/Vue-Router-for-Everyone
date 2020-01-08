@@ -1,10 +1,6 @@
 import Vue from "vue";
 import Router from "vue-router";
 import Home from "./views/Home.vue";
-import Brazil from "./views/Brazil";
-import Panama from "./views/Panama";
-import Hawaii from "./views/Hawaii";
-import Jamaica from "./views/Jamaica";
 
 Vue.use(Router);
 export default new Router({
@@ -17,8 +13,8 @@ export default new Router({
     {
       path: "/about",
       name: "about",
-      //route level code-splitting
-      // this generates a separate chunk (about.[hash].js) for th
+      // route level code-splitting
+      // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () =>
         import(/* webpackChunkName: "about" */ "./views/About.vue")
@@ -26,22 +22,26 @@ export default new Router({
     {
       path: "/brazil",
       name: "brazil",
-      component: Brazil
+      component: () =>
+        import(/* webpackChunkName: "brazil" */ "./views/Brazil.vue")
     },
     {
       path: "/panama",
       name: "panama",
-      component: Panama
+      component: () =>
+        import(/* webpackChunkName: "panama" */ "./views/Panama.vue")
     },
     {
       path: "/hawaii",
       name: "hawaii",
-      component: Hawaii
+      component: () =>
+        import(/* webpackChunkName: "hawaii" */ "./views/Hawaii.vue")
     },
     {
       path: "/jamaica",
       name: "jamaica",
-      component: Jamaica
+      component: () =>
+        import(/* webpackChunkName: "jamaica" */ "./views/Jamaica.vue")
     }
   ]
 });
