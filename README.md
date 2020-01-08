@@ -52,3 +52,13 @@ git branch -a
 ```
 git push origin --delete 远程分支名称
 ```
+## Git拉取远程分支
+
+```
+git pull origin
+```
+## Git推送数据到远程仓库
+
+```
+git push [remote-name] [branch-name]
+```
