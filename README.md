@@ -1,5 +1,7 @@
 # vue-router-for-everyone
 
+## “dynamic” 是 “动态的意思”
+
 ## Project setup
 ```
 npm install
