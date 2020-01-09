@@ -23,7 +23,7 @@ export default {};
   color: #2c3e50;
   padding: 0 10px;
 }
-#nav a.router-link-exact-active {
-  color: red;
+#nav a.vue-school-active-class {
+  color: #ab26ab;
 }
 </style>
