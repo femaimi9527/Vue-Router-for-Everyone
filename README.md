@@ -62,3 +62,9 @@ git pull origin
 ```
 git push [remote-name] [branch-name]
 ```
+
+## Git在github创建某分支的新分支
+1. 去到某分支；
+2. 点击“Branch：...”;
+3. “find or create a branch...”;
+4. 输入新分支名称，Enter回车键，完成。
