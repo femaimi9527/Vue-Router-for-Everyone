@@ -1,5 +1,7 @@
 # vue-router-for-everyone
 
+## “route” 是 “路径，路由的意思”，“router” 是 “路由器的意思” 
+
 ## Project setup
 ```
 npm install
