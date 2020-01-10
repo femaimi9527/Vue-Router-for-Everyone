@@ -1,5 +1,7 @@
 # vue-router-for-everyone
 
+## “route” 是 “路径，路由的意思”，“router” 是 “路由器的意思” 
+
 ## Project setup
 ```
 npm install
@@ -68,10 +70,3 @@ git push [remote-name] [branch-name]
 2. 点击“Branch：...”;
 3. “find or create a branch...”;
 4. 输入新分支名称，Enter回车键，完成。
-
-## Github启用SSH连接：
-1. ```git config user.name “你的用户名”```;
-2. ```git config user.email “你的注册在github的电子邮箱地址”```;
-3. ```ssh-keygen -t rsa -C "femaimi9527@gmail.com"```;
-4. ```ssh -T git@github.com```,提示“Hi femaimi9527! You've successfully authenticated, but GitHub does not provide shell access.”则成功;
-5. 登录github网站，在setting里面的“SSH and GPG keys”里面，“New SSH key”,把自己电脑的“id_rsa.pub”文件打开，复制以“ssh-rsa...”开头的公钥，粘贴到github，完成;
