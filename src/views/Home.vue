@@ -4,14 +4,20 @@
     <div class="destinations">
       <div v-for="destination in destinations" :key="destination.name">
         <router-link
-          :to="{ name: 'DestinationDetails', params: { id: destination.id } }"
+          :to="{
+            name: 'DestinationDetails',
+            params: { slug: destination.slug }
+          }"
         >
           <h2>{{ destination.name }}</h2>
         </router-link>
         <!--图片的路由导航-->
         <figure>
           <router-link
-            :to="{ name: 'DestinationDetails', params: { id: destination.id } }"
+            :to="{
+              name: 'DestinationDetails',
+              params: { slug: destination.slug }
+            }"
           >
             <img
               :src="require(`@/assets/${destination.image}`)"
@@ -26,7 +32,7 @@
 
 <script>
 // “@” is an alias to “/src”
-import store from "@/store.js";
+import store from "@/store";
 
 export default {
   name: "home",
