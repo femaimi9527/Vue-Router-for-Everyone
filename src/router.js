@@ -69,9 +69,15 @@ const router = new Router({
       meta: { requiresAuth: true }
     },
     {
-      path: "login",
+      path: "/login",
       name: "login",
       component: () => import(/* webpackChunkName: "Login" */ "./views/Login")
+    },
+    {
+      path: "/invoices",
+      name: "invoices",
+      component: () => import(/* webpackChunkName: "Invoices" */ "./views/Invoices"),
+      meta: { requiresAuth: true }
     },
     {
       path: "/404",
@@ -91,8 +97,9 @@ router.beforeEach((to, from, next) => {
     //need to login
     if (!store.user) {
       next({
-        name: "login"
-      })
+        name: "login",
+        query: { redirect: to.fullPath }
+      });
     } else {
       next();
     }
