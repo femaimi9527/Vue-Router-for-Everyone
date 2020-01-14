@@ -4,7 +4,8 @@ import Home from "./views/Home.vue";
 import store from '@/store';
 
 Vue.use(Router);
-export default new Router({
+
+const router = new Router({
   mode: "history",
   linkExactActiveClass: "vue-school-active-class",
   scrollBehavior(to, from, savedPosition) {
@@ -46,7 +47,7 @@ export default new Router({
           props: true,
           component: () =>
             import(
-              /*webpackChunkName:"ExperienceDetails" */ "./views/ExperienceDetails"
+              /*webpackChunkName: "ExperienceDetails" */ "./views/ExperienceDetails"
             )
         }
       ],
@@ -62,6 +63,17 @@ export default new Router({
       }
     },
     {
+      path: "/user",
+      name: "user",
+      component: () => import(/* webpackChunkName: "User" */ "./views/User"),
+      meta: { requiresAuth: true }
+    },
+    {
+      path: "login",
+      name: "login",
+      component: () => import(/* webpackChunkName: "Login" */ "./views/Login")
+    },
+    {
       path: "/404",
       alias: "*",
       name: "notFound",
@@ -72,3 +84,21 @@ export default new Router({
     }
   ]
 });
+
+router.beforeEach((to, from, next) => {
+  // if (to.meta.requiresAuth) {
+  if (to.matched.some(record => record.meta.requiresAuth)) {
+    //need to login
+    if (!store.user) {
+      next({
+        name: "login"
+      })
+    } else {
+      next();
+    }
+  } else {
+    next();
+  }
+})
+
+export default router;
