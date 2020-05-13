@@ -4,6 +4,7 @@
     <section class="destination">
       <h1>{{ destination.name }}</h1>
       <div class="destination-details">
+        <!-- ES6的模板字符串，上面循环了store.js中destination的experience属性，然后从image这个key中拿它的值，刚好是assets里面的文件名，也就是通过使用模板字符串传入拼接成了srcrequire的链接地址 -->
         <img
           :src="require(`@/assets/${destination.image}`)"
           :alt="destination.name"
